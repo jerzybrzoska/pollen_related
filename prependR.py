@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-#This code is meant to check whether the first line of a file with .html.pmd extension starts with "#lang pollen".
-#If it is not so, then it is meant to prepend the file with "#lang pollen".
+#This code is meant to check whether the first line of all files with .html.pmd extension (that are in the current directory and in the subdirectories) 
+#starts with "#lang pollen". #If it is not so, then it prepends the file with "#lang pollen".
 
 import glob, os
 
