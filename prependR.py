@@ -7,9 +7,7 @@ import glob, os
 
 hashBangPollen = "#lang pollen"
 
-cwd = os.getcwd()
-
-fileList = glob.glob(f"{cwd}/**/*.html.pmd", recursive=True)
+fileList = glob.glob(f"{cwd := os.getcwd()}/**/*.html.pmd", recursive=True)
 
 for f in fileList:
     with open(f) as pmd:
@@ -21,4 +19,3 @@ for f in fileList:
                 content = pmd2.read()
                 pmd2.seek(0, 0)
                 pmd2.write(hashBangPollen.rstrip('\r\n') + '\n' + content)
-
